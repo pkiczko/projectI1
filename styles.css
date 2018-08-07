@@ -13,20 +13,28 @@ body {
 .left {
     float: left;
     width: 20%;
+    display: table-cell;
+    vertical-align: middle
 }
+.code{
+  color: grey;
+  font-size: 14px}
 .main {
-	padding:3%;
-	float:left;
-  margin-left: auto;
-  margin-right: auto;
-  width:55%;
-  min-height: 1em;
+  	padding:3%;
+  	float:left;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+    min-height: 1em;
     display: table-cell;
     vertical-align: middle
     }
 .right {
 	float:left;
-  	width:25%;
+  	width:30%;
+    min-height: 1em;
+    display: table-cell;
+    vertical-align: middle
   }
 .row:after {
     content: "";
@@ -40,7 +48,7 @@ header {
     padding: 00px;
     text-align: center;
     font-family: 'Arial',fantasy;
-    font-size: 15px;
+    font-size: 16px;
     color: white;
 
     }
@@ -48,8 +56,14 @@ h2.indent{padding-left:1.8em}
 
 /* Container for flexboxes */
 section {
-
+  content-align: middle;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   /*padding-left:2.8em;*/
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     font-style: bold;
     font-family: 'Arial',fantasy;
     display: -webkit-flex;
@@ -57,9 +71,10 @@ section {
     font-size: 16px;
     padding: 12px;
     border:0.1em solid #FFFFFF;
-  	margin:0 0.2em 0.2em 0;
+  	/*margin:0 0.2em 0.2em 0;*/
   	border-radius:0.12em;
-    background-color: black
+    background-color: black;
+    vertical-align: middle;
 }
 
 
@@ -76,7 +91,7 @@ nav {
 div.lineSeparator{
 	height:1px;
 	width:100%;
-	background-color:rgba(255,255,255,0.7);
+	background-color:rgba(255,255,255,1);
 	margin:3em 0;
 }
 @media all and (max-width:50em){
@@ -88,10 +103,10 @@ div.lineSeparator{
 a.button4{
 	display:inline-block;
 
-  width: 15%;
+  width: 20%;
   padding:0.3em 0em;
 	border:0.1em solid #FFFFFF;
-	margin:0 2.0em 0.2em 0;
+	margin:0 1.0em 0.2em 0;
 	border-radius:0.32em;
 	box-sizing: border-box;
 	text-decoration:none;
@@ -107,34 +122,37 @@ a.button4:hover{
 }
 @media all and (max-width:40em){
   #logo{
-    min-width: 60px;
+    min-width: 100px;
     margin-right: 1%
   }
 	a.button4{
 		display:block;
 		margin:0.4em auto;
-    width: 100%;
+    width: 95%;
 	}
 }
 
 .button4 {
+  margin-top: auto;
+  margin-bottom: auto;
   background-color: black;
-	display:inline-block;
-  width: 15%;
+	display:block;
+  width: 25%;
   padding:0.3em 0em;
 	border:0.1em solid #FFFFFF;
-	margin:0 0em 0.2em 0;
+	margin:0 1em 1.2em 0;
   margin-left: auto;
   margin-right: auto;
 	border-radius:0.32em;
 	box-sizing: border-box;
 	text-decoration:none;
 	font-family: 'Arial',fantasy;
-	font-weight:100;
+	font-weight:80;
 	color:white;
 	text-align:center;
 	transition: all 0.2s;
-  vertical-align: middle
+  vertical-align: middle;
+  border: rigid;
 }
 .button4:hover {
 	color:#000000;
@@ -180,13 +198,14 @@ footer {
     margin-left: auto;
     margin-right: auto;
 
-    font-size: 16px;
+    font-size: 26px;
     background-color: black;
     padding: 10px;
     text-align: center;
     color: white;
 
 }
+footer.h2{font-size: 16px}
 
 .fa {
     color: white;
